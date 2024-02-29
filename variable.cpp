@@ -1,4 +1,4 @@
-//29.02.2024  DAY-2 CLASS-1  @KKN2K19
+//29.02.2024
 
 #include<iostream>
 using namespace std;
