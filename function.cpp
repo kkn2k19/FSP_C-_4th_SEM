@@ -8,8 +8,8 @@ using namespace std;
 //user-defined : add(), average(), or twoSum()
 //predefined : printf(), scanf() etc...
 
-//parameterized function : these function need to fulfill their
-//non parameterized function:
+//parameterized function : these function need to fulfill their requirement to run.
+//non parameterized function: they don't have any requirement.
 
 // int add(int a, int b)
 // {
