@@ -65,6 +65,9 @@ int main()
     //     cout << "Fail";
     // }
 
+
+    //SWITCH CASE FOR ABOVE PROBLEM
+    
     // int n;
     // cout << "Enter marks : ";
     // cin >> n;
