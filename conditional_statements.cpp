@@ -5,7 +5,18 @@ using namespace std;
 
 int main() 
 {
-    //1. if 
+    //1. if
+
+    // int n;
+
+    // cout << "Enter value of n: ";
+    // cin >> n;
+
+    // if (n>50)
+    // {
+    //     cout << "Hello World!";
+    // }
+
     //2. if-else
 
     // int n;
