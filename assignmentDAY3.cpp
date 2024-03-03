@@ -111,58 +111,58 @@
 // displayMovie
 // Print details of movie incl members and behaviour also Use static, parameterized constructor, this keyword, destructor etc.
 
-#include<iostream>
+#include <iostream>
 using namespace std;
-#define SIZE 5
+#define SIZE 3 // Corrected the size of the cast array
 
-class Movie 
-{
-    public:
-        string name;
-        string genre;
-        int duration;
-        float rating;
-        string cast[SIZE];
-        string director;
-        string success;
+class Movie {
+public:
+    string name;
+    string genre;
+    int duration;
+    float rating;
+    string cast[SIZE];
+    string director;
+    string success;
 
-        Movie(string name, string genre, int duration, float rating, string cast[], string director, string success) 
+    Movie(string name, string genre, int duration, float rating, const string cast[], string director, string success) 
+    {
+        this->name = name;
+        this->genre = genre;
+        this->duration = duration;
+        this->rating = rating;
+        for(int i=0; i<SIZE; i++)
         {
-            this->name = name;
-            this->genre = genre;                this->duration = duration;
-            this->rating = rating;
-            for(int i=0; i<SIZE; i++)
-            {
-                this->cast[i] = cast[i];                
-            }
-            this->director = director;
-            this->success = success;
+            this->cast[i] = cast[i];
         }
+        this->director = director;
+        this->success = success;
+    }
 
-        ~Movie() 
+    ~Movie() 
+    {
+        cout << "Movie Constructor Destructed." << name << endl;
+    }
+
+    void display() 
+    {
+        cout << "Name: " << name << endl;
+        cout << "Genre: " << genre << endl;
+        cout << "Duration: " << duration << " minutes" << endl;
+        cout << "Rating: " << rating << endl;
+        cout << "Cast : " << endl;
+        for(int i=0; i<SIZE; i++)
         {
-           cout << "Movie Constructor Destructed." << name << endl;
+            cout << "(" << i+1 << ")" << cast[i] << endl;
         }
-
-        void display() 
-        {
-            cout << "Name: " << name << endl;
-            cout << "Genre: " << genre << endl;
-            cout << "Duration: " << duration << " minutes" << endl;
-            cout << "Rating: " << rating << endl;
-            cout << "Cast : " << endl;
-            for(int i=0; i<SIZE; i++)
-            {
-                        cout << "(" << i+1 << ")" << cast[i] << endl;
-                    }
-                    cout << "Director: " << director << endl;
-                    cout << "Success: " << success << endl;
-                }
+        cout << "Director: " << director << endl;
+        cout << "Success: " << success << endl;
+    }
 };
 
 int main() {    
-    Movie m1 = Movie("3 Idiots", "Comedy/ Drama", 170, 8.4, "Rajkumar Hirani", "Hit");
-    m1.cast[SIZE]={"Aamir Khan as Rancho", "R. Madhavan as Farhan Qureshi", "Sharman Joshi as Raju Rastogi"};
+    string cast[SIZE] = {"Aamir Khan as Rancho", "R. Madhavan as Farhan Qureshi", "Sharman Joshi as Raju Rastogi"};
+    Movie m1 = Movie("3 Idiots", "Comedy/ Drama", 170, 8.4, cast, "Rajkumar Hirani", "Hit");
     m1.display();
 
     return 0;
