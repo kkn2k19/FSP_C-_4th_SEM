@@ -106,35 +106,112 @@
 
 //    syntax : virtual void/int/float(return type) functionName = 0;
 
-#include <iostream>
+// #include <iostream>
+// using namespace std;
+
+// class Shape
+// {
+// public:
+//     virtual void draw() = 0; // pure virtual function
+
+//     void display()
+//     {
+//         cout << "Area of shape" << endl;
+//     }
+// };
+
+// class Rectangle : public Shape
+// {
+//     public:
+//         void draw() override
+//         {
+//             cout << "Draw a rectangle !!!" << endl;
+//         } 
+// };
+
+// int main()
+// {
+//     Shape *shape1 = new Rectangle();
+//     shape1->draw();
+//     shape1->display();
+
+//     delete shape1;
+//     return 0;
+// }
+
+// Getter and Setter
+
+//  - Getter and Setter are methods used to access and modify the private or protected data members of a class.
+
+//  - they provide controlled access to the class's private members or protected.
+
+//  - it allows us to achieve encapsulation and data abstraction.
+
+// Getter : 
+//  - it is a method that allows us to retrieve the value of data member(private).
+//  - they are typically declared as public.
+//  - they do not modify value but get the value.
+
+// Setter : 
+//  - it is a method used to modify the value of data member.
+//  - they are also declared as public.
+
+#include<iostream>
 using namespace std;
 
-class Shape
+class Employee
 {
-public:
-    virtual void draw() = 0; // pure virtual function
+    private: 
+        int empId;
+        string empName;
+        long long phone;
 
-    void display()
-    {
-        cout << "Area of shape" << endl;
-    }
-};
-
-class Rectangle : public Shape
-{
-    public:
-        void draw() override
+    public: 
+        //setter
+        void  setEmpId(int empId)
         {
-            cout << "Draw a rectangle !!!" << endl;
+            this->empId = empId;
         } 
+        //getter
+        int getEmpId()
+        {
+            return this->empId;
+        }
+
+        //setter
+        void  setEmpName(const string &empName)
+        {
+            this->empName = empName;  
+        } 
+        //getter
+        string getEmpName()
+        {
+            return this->empName;
+        }
+
+        //setter
+        void setPhone(long long phone)
+        {
+            this->phone = phone;
+        } 
+        //getter
+        long long getPhone()
+        {
+            return this->phone;
+        }
 };
 
 int main()
 {
-    Shape *shape1 = new Rectangle();
-    shape1->draw();
-    shape1->display();
+    Employee employee;
 
-    delete shape1;
+    employee.setEmpId(101);
+    employee.setEmpName("KARAN");
+    employee.setPhone(9304397220);
+
+    cout << employee.getEmpId() << endl;
+    cout << employee.getEmpName() << endl;
+    cout << employee.getPhone() << endl;
+
     return 0;
 }
