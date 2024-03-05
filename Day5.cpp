@@ -380,25 +380,25 @@
 
 //writing into a file
 
-#include<iostream>
-#include<fstream>
-using namespace std;
+// #include<iostream>
+// #include<fstream>
+// using namespace std;
 
-int main()
-{
-    ofstream filestream("HelloFile.txt");
+// int main()
+// {
+//     ofstream filestream("HelloFile.txt");
 
-    if(filestream.is_open())
-    {
-        filestream << "Hello C++ from C\n";
-        filestream.close();
-    }
-    else 
-    {
-        cout << "Failed to open file";
-    }
-    return 0;
-}
+//     if(filestream.is_open())
+//     {
+//         filestream << "Hello C++ from C\n";
+//         filestream.close();
+//     }
+//     else 
+//     {
+//         cout << "Failed to open file";
+//     }
+//     return 0;
+// }
 
 //Reading from file
 
@@ -425,3 +425,45 @@ int main()
 //     }
 //     return 0;
 // }
+
+// String
+
+//  - string is class in c++ that represents the sequence of character.
+
+//  - with the help of c++ string class, we can perform many task
+//    like : concatenation, comparison, conversion, replace
+
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main()
+{
+    //creation of string
+    string name = "chandanOP";
+    cout << name << endl;
+
+    //Length of string
+    cout << "Length of string : " << name.length() << endl;
+
+    //access and modify character of string
+    name[0] = 'C';
+    name[1] = 'H';
+
+    cout << name << endl; 
+
+    //for append
+    name.append(" Gamer");
+    cout << name << endl;
+
+    //find character in string
+    cout << name.find("OP") << endl;
+
+    //replace character in string
+    //name.replace("OP", "op");
+    //cout << name << endl;
+
+    return 0; 
+}
