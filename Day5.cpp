@@ -126,7 +126,7 @@
 //         void draw() override
 //         {
 //             cout << "Draw a rectangle !!!" << endl;
-//         } 
+//         }
 // };
 
 // int main()
@@ -147,12 +147,12 @@
 
 //  - it allows us to achieve encapsulation and data abstraction.
 
-// Getter : 
+// Getter :
 //  - it is a method that allows us to retrieve the value of data member(private).
 //  - they are typically declared as public.
 //  - they do not modify value but get the value.
 
-// Setter : 
+// Setter :
 //  - it is a method used to modify the value of data member.
 //  - they are also declared as public.
 
@@ -161,17 +161,17 @@
 
 // class Employee
 // {
-//     private: 
+//     private:
 //         int empId;
 //         string empName;
 //         long long phone;
 
-//     public: 
+//     public:
 //         //setter
 //         void  setEmpId(int empId)
 //         {
 //             this->empId = empId;
-//         } 
+//         }
 //         //getter
 //         int getEmpId()
 //         {
@@ -181,8 +181,8 @@
 //         //setter
 //         void  setEmpName(const string &empName)
 //         {
-//             this->empName = empName;  
-//         } 
+//             this->empName = empName;
+//         }
 //         //getter
 //         string getEmpName()
 //         {
@@ -193,7 +193,7 @@
 //         void setPhone(long long phone)
 //         {
 //             this->phone = phone;
-//         } 
+//         }
 //         //getter
 //         long long getPhone()
 //         {
@@ -262,39 +262,166 @@
 
 // throw : throw is used to throw exception or a message.
 
+// #include<iostream>
+// using namespace std;
+
+// float divison(int a, int b)
+// {
+//     if(b==0)
+//     {
+//         throw "Divison by zero is not allowed !!!";
+//     }
+//     float c = a/b;
+
+//     return c;
+// }
+
+// int main()
+// {
+//     int a, b;
+//     cout << "Enter the value of a : ";
+//     cin >> a;
+//     cout << endl;
+
+//     cout << "Enter the value of b : ";
+//     cin >> b;
+//     cout << endl;
+
+//     float k = k;
+
+//     try{
+//         k = divison(a, b);
+//         cout << k << endl;
+//     }
+//     catch(const char* e){
+//         cerr << e << endl;
+//     }
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     try
+//     {
+//         int arr[5] = {1, 2, 3, 4, 5};
+//         int index;
+//         cout << "Enter an index to access the array: ";
+//         cin >> index;
+
+//         if (index < 0 || index >= 5)
+//         {
+//             throw out_of_range("Index out of range");
+//         }
+
+//         cout << "Value at index " << index << " is: " << arr[index] << endl;
+//     }
+//     catch (const out_of_range &e)
+//     {
+//         cerr << "Caught exception: " << e.what() << endl;
+//     }
+//     return 0;
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// float division(int a, int b)
+// {
+// 	if(b == 0)
+// 	{
+// 		throw "Divide by zero is not allowed !!!";
+// 	}
+// 	float c = a/b;
+	
+// 	return c;
+// }
+
+// float add(int a, int b)
+// {
+// 	float c = a+b;
+	
+// 	return c;
+// }
+
+// int main()
+// {
+// 	int a,b;
+// 	cout << "Enter the value of a :";
+// 	cin >> a;
+// 	cout<<endl;
+	
+// 	cout << "Enter the value of b :";
+// 	cin >> b;
+// 	cout<<endl;
+	
+// 	float k = 0;
+	
+// 	try{
+// 		k = division(a,b);
+// 		cout << k<<endl;
+// 	}
+// 	catch(const char* e)
+// 	{
+// 		cerr << e << endl;
+// 	}
+	
+// 	cout <<"Maintained flow of program after exception handling : "<< add(a,b) << endl;
+		
+// 	return 0;
+// }
+
+// File Handling
+
+//  - it allow us to work with files in a system
+//  - it reads, writes and manipulate the content of file.
+
+//writing into a file
+
 #include<iostream>
+#include<fstream>
 using namespace std;
-
-float divison(int a, int b)
-{
-    if(b==0)
-    {
-        throw "Divison by zero is not allowed !!!";
-    }
-    float c = a/b;
-
-    return c;
-}
 
 int main()
 {
-    int a, b;
-    cout << "Enter the value of a : ";
-    cin >> a;
-    cout << endl;
+    ofstream filestream("HelloFile.txt");
 
-    cout << "Enter the value of b : ";
-    cin >> b;
-    cout << endl;
-
-    float k = k;
-
-    try{
-        k = divison(a, b);
-        cout << k << endl;
+    if(filestream.is_open())
+    {
+        filestream << "Hello C++ from C\n";
+        filestream.close();
     }
-    catch(const char* e){
-        cerr << e << endl;
+    else 
+    {
+        cout << "Failed to open file";
     }
     return 0;
 }
+
+//Reading from file
+
+// #include<iostream>
+// #include<fstream>
+// using namespace std;
+
+// int main()
+// {
+//     string str;
+
+//     ifstream filestream("HelloFile.txt");
+
+//     if(filestream.is_open())
+//     {
+//         while(getline(filestream, str))
+//         {
+//             cout << str << endl;
+//         }
+//         filestream.close();
+//     }
+//     else{
+//         cout << "Failed to open file !!!";
+//     }
+//     return 0;
+// }
