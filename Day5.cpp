@@ -6,44 +6,94 @@
 
 //  - in c++, it is done with the help of virtual function or keyword 
 
+// #include<iostream>
+// using namespace std;
+
+// class Animal
+// {
+//     public:
+//           virtual void sound()
+//           {
+//             cout << "Animal's Sound..."<< endl;
+//           }
+// };
+
+// class Dog : public Animal
+// {
+//     public:
+//         void sound() override
+//         {
+//             cout << "Now Dog is Barking" << endl;
+//         }
+// };
+
+// class Cat : public Animal
+// {
+//     public: 
+//         void sound() override
+//         {
+//             cout << "Now Cat is Meow" << endl;
+//         }
+// };
+
+// int main()
+// {
+//     Animal *animal1 = new Dog();  //new is used for dynamic memory allocation of object at run time.
+//     Animal *animal2 = new Cat();
+
+//     animal1 ->sound();
+//     animal2 ->sound();
+
+//     delete animal1;
+//     delete animal2;
+
+//     return 0;
+// }
+
+
+
+//BANKING SYSTEM
+
 #include<iostream>
 using namespace std;
 
-class Animal
+class Banking
 {
     public:
-          virtual void sound()
+          virtual void BankingSystem()
           {
-            cout << "Animal's Sound..."<< endl;
+            cout << "Please Invest Money"<< endl;
           }
 };
 
-class Dog : public Animal
+class Customer1 : public Banking
 {
     public:
-        void sound() override{
-            cout << "Now Dog is Barking" << endl;
+        void BankingSystem() override
+        {
+            cout << "Withdraw" << endl;
         }
 };
 
-class Cat : public Animal
+class Customer2 : public Banking
 {
     public: 
-        void sound() override{
-        cout << "Now Cat is Meow" << endl;
+        void BankingSystem() override
+        {
+            cout << "Deposit" << endl;
         }
 };
 
 int main()
 {
-    Animal *animal1 = new Dog();  //new is used for dynamic memory allocation of object at run time.
-    Animal *animal2 = new Cat();
+    Banking *c1 = new  Customer1();
+    Banking *c2 = new  Customer2();
 
-    animal1 ->sound();
-    animal2 ->sound();
+    c1->BankingSystem();
+    c2->BankingSystem();
 
-    delete animal1;
-    delete animal2;
+    delete c1;
+    delete c2;
 
     return 0;
 }
