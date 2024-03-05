@@ -156,62 +156,145 @@
 //  - it is a method used to modify the value of data member.
 //  - they are also declared as public.
 
+// #include<iostream>
+// using namespace std;
+
+// class Employee
+// {
+//     private: 
+//         int empId;
+//         string empName;
+//         long long phone;
+
+//     public: 
+//         //setter
+//         void  setEmpId(int empId)
+//         {
+//             this->empId = empId;
+//         } 
+//         //getter
+//         int getEmpId()
+//         {
+//             return this->empId;
+//         }
+
+//         //setter
+//         void  setEmpName(const string &empName)
+//         {
+//             this->empName = empName;  
+//         } 
+//         //getter
+//         string getEmpName()
+//         {
+//             return this->empName;
+//         }
+
+//         //setter
+//         void setPhone(long long phone)
+//         {
+//             this->phone = phone;
+//         } 
+//         //getter
+//         long long getPhone()
+//         {
+//             return this->phone;
+//         }
+// };
+
+// int main()
+// {
+//     Employee employee;
+
+//     employee.setEmpId(101);
+//     employee.setEmpName("KARAN");
+//     employee.setPhone(9304397220);
+
+//     cout << employee.getEmpId() << endl;
+//     cout << employee.getEmpName() << endl;
+//     cout << employee.getPhone() << endl;
+
+//     return 0;
+// }
+
+// there are two types of variable
+// 1. dynamic variable : which change or which we change
+// 2. constant variable : which we can't change in future.
+
+// #include<iostream>
+// using namespace std;
+
+// int main()
+// {
+//     int var_D = 45; //we can change it in future
+//     const int size = 10; //we cant change in future
+
+//     cout << "Original Value : " << var_D << endl;
+//     cout << "Original Value : " << size << endl;
+
+//     var_D = 50;
+//     cout << "Modified Value : " << var_D << endl;
+
+//     size = 20;
+//     cout << "Modified Value : " << size << endl;
+// }
+
+// Exception Handling
+
+//  - Exception is a type of interruption that stop or interupt the normal flow of a program at the runtime.
+
+//  - it can be solved with the help of exception handling mechanism.
+
+//  - Exception handling is used to deal with runtime error during program execution.
+
+//  - it allow us to run program without terminating the program.
+
+//  - we use exception handling to maintain normal flow of a program.
+
+//  - Exception Handling achieved by 3 keyword
+
+//     - try
+//     - catch
+//     - throw
+
+// try : try is used to place the code where error may be occur the exception.
+
+// catch : catch is used to catch the exception and handle it.
+
+// throw : throw is used to throw exception or a message.
+
 #include<iostream>
 using namespace std;
 
-class Employee
+float divison(int a, int b)
 {
-    private: 
-        int empId;
-        string empName;
-        long long phone;
+    if(b==0)
+    {
+        throw "Divison by zero is not allowed !!!";
+    }
+    float c = a/b;
 
-    public: 
-        //setter
-        void  setEmpId(int empId)
-        {
-            this->empId = empId;
-        } 
-        //getter
-        int getEmpId()
-        {
-            return this->empId;
-        }
-
-        //setter
-        void  setEmpName(const string &empName)
-        {
-            this->empName = empName;  
-        } 
-        //getter
-        string getEmpName()
-        {
-            return this->empName;
-        }
-
-        //setter
-        void setPhone(long long phone)
-        {
-            this->phone = phone;
-        } 
-        //getter
-        long long getPhone()
-        {
-            return this->phone;
-        }
-};
+    return c;
+}
 
 int main()
 {
-    Employee employee;
+    int a, b;
+    cout << "Enter the value of a : ";
+    cin >> a;
+    cout << endl;
 
-    employee.setEmpId(101);
-    employee.setEmpName("KARAN");
-    employee.setPhone(9304397220);
+    cout << "Enter the value of b : ";
+    cin >> b;
+    cout << endl;
 
-    cout << employee.getEmpId() << endl;
-    cout << employee.getEmpName() << endl;
-    cout << employee.getPhone() << endl;
+    float k = k;
 
+    try{
+        k = divison(a, b);
+        cout << k << endl;
+    }
+    catch(const char* e){
+        cerr << e << endl;
+    }
     return 0;
 }
