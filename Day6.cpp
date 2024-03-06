@@ -61,30 +61,47 @@ using namespace std;
 
 int main()
 {
-    vector<int> vec;
+    //vector<int> vec;
 
-    vec.push_back(10);
-    vec.push_back(20);
-    vec.push_back(30);
-    vec.push_back(40);
-    vec.push_back(50);
-    vec.push_back(60);
+    // vec.push_back(10);
+    // vec.push_back(20);
+    // vec.push_back(30);
+    // vec.push_back(40);
+    // vec.push_back(50);
+    // vec.push_back(60);
 
-    vec.pop_back();    // for deleting
+    // vec.pop_back();    // for deleting
 
-    //display
-    for(int x : vec)
+    // //display
+    // for(int x : vec)
+    // {
+    //     cout << x << " "; 
+    // }
+
+    // cout << endl;
+
+    // cout << "Size of Vector : " << vec.size() << endl;    // for size
+
+    // vec.clear();   // for erasing all elements of vector 
+
+    // cout << "Size of Vector : " << vec.size() << endl;
+
+//Vector of pair
+
+    vector< pair<int, string> > vec;
+
+    vec.push_back(make_pair(101, "Karan"));
+    vec.push_back(make_pair(98, "Om"));
+    vec.push_back(make_pair(100, "Rahul"));
+    vec.push_back(make_pair(80, "Shadaf"));
+
+    for(const auto &pair : vec)
     {
-        cout << x << " "; 
+        cout << "Roll no : " << pair.first << " Name : " << pair.second << endl;
     }
-
-    cout << endl;
-
-    cout << "Size of Vector : " << vec.size() << endl;    // for size
-
-    vec.clear();   // for erasing all elements of vector 
-
-    cout << "Size of Vector : " << vec.size() << endl;
 
     return 0;
 }
+
+
+
