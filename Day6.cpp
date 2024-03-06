@@ -1,19 +1,19 @@
-//STL (standard tag linrary)
+// STL (standard tag linrary)
 
 //  - In C++, STL provide powerful collection of classes and functions of general purpose data structures and algorithms.
 
-// it include 4 types of method : 
+// it include 4 types of method :
 
-//  - Container : 
+//  - Container :
 // *        Vector : dynamic array that grow and shrink at runtime.
 // *        List : A doubly linked list
 // *        Map : An associated container that store data in key-value pair.
-// *        Set : It contains distinct elements or unique element 
+// *        Set : It contains distinct elements or unique element
 //                 {1,2,3,1,2,3}={1,2,3}
 // *        Stack : LIFO
 // *        Queue : FIFO
 
-//  - Algorithms : 
+//  - Algorithms :
 //           sorting : sort in ascending and descending order
 //           T : O(logn)   S : O(1)
 
@@ -22,7 +22,7 @@
 
 //           max(), min(), accumulate(), find() etc
 
-//  - Iterators : 
+//  - Iterators :
 //           - Forward iterator : forward traversal
 //           - Bidirection : backward and forward traversal
 //           - Random access : direct access on element
@@ -51,57 +51,89 @@
 //     return 0;
 // }
 
-// Vector : 
+// Vector :
 //     - a sequenced container that dynamically manages elements of an array.
 //     - used for efficient traversal.
 
-#include<iostream>
-#include<bits/stdc++.h>     // for stl library
+// #include<iostream>
+// #include<bits/stdc++.h>     // for stl library
+// using namespace std;
+
+// int main()
+// {
+//     //vector<int> vec;
+
+//     // vec.push_back(10);
+//     // vec.push_back(20);
+//     // vec.push_back(30);
+//     // vec.push_back(40);
+//     // vec.push_back(50);
+//     // vec.push_back(60);
+
+//     // vec.pop_back();    // for deleting
+
+//     // //display
+//     // for(int x : vec)
+//     // {
+//     //     cout << x << " ";
+//     // }
+
+//     // cout << endl;
+
+//     // cout << "Size of Vector : " << vec.size() << endl;    // for size
+
+//     // vec.clear();   // for erasing all elements of vector
+
+//     // cout << "Size of Vector : " << vec.size() << endl;
+
+//     return 0;
+// }
+
+// Vector of pair
+
+// #include<iostream>
+// #include<bits/stdc++.h>     // for stl library
+// using namespace std;
+
+// int main()
+// {
+//     vector< pair<int, string> > vec;
+
+//     vec.push_back(make_pair(80, "Shadaf"));
+//     vec.push_back(make_pair(98, "Om"));
+//     vec.push_back(make_pair(100, "Rahul"));
+//     vec.push_back(make_pair(101, "Karan"));
+
+//     for(const auto &pair : vec)
+//     {
+//         cout << "Roll no : " << pair.first << "\tName : " << pair.second << endl;
+//     }
+
+//     return 0;
+// }
+
+// Vector of Vector
+
+#include <iostream>
+#include <bits/stdc++.h> // for stl library
 using namespace std;
 
 int main()
 {
-    //vector<int> vec;
+    vector<vector<int>> vec;
 
-    // vec.push_back(10);
-    // vec.push_back(20);
-    // vec.push_back(30);
-    // vec.push_back(40);
-    // vec.push_back(50);
-    // vec.push_back(60);
+    vec.push_back({1, 2, 3});
+    vec.push_back({4, 5, 6});
+    vec.push_back({7, 8, 9});
 
-    // vec.pop_back();    // for deleting
-
-    // //display
-    // for(int x : vec)
-    // {
-    //     cout << x << " "; 
-    // }
-
-    // cout << endl;
-
-    // cout << "Size of Vector : " << vec.size() << endl;    // for size
-
-    // vec.clear();   // for erasing all elements of vector 
-
-    // cout << "Size of Vector : " << vec.size() << endl;
-
-//Vector of pair
-
-    vector< pair<int, string> > vec;
-
-    vec.push_back(make_pair(101, "Karan"));
-    vec.push_back(make_pair(98, "Om"));
-    vec.push_back(make_pair(100, "Rahul"));
-    vec.push_back(make_pair(80, "Shadaf"));
-
-    for(const auto &pair : vec)
+    for(const auto &row : vec)
     {
-        cout << "Roll no : " << pair.first << " Name : " << pair.second << endl;
+        for(int x : row)
+        {
+            cout << x << " ";
+        }
+        cout << endl;
     }
 
     return 0;
 }
-
-
-
