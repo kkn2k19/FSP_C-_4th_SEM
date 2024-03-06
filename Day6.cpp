@@ -70,11 +70,21 @@ int main()
     vec.push_back(50);
     vec.push_back(60);
 
+    vec.pop_back();    // for deleting
+
     //display
     for(int x : vec)
     {
         cout << x << " "; 
     }
+
+    cout << endl;
+
+    cout << "Size of Vector : " << vec.size() << endl;    // for size
+
+    vec.clear();   // for erasing all elements of vector 
+
+    cout << "Size of Vector : " << vec.size() << endl;
 
     return 0;
 }
