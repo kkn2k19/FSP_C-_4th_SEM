@@ -209,30 +209,30 @@
 
 // 0 1 1 2 3 
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-int fib(int n)
-{
-    if (n <= 1)
-    {
-        return n;
-    }
-    else
-    {
-        return (fib(n - 1) + fib(n - 2));
-    }
-}
+// int fib(int n)
+// {
+//     if (n <= 1)
+//     {
+//         return n;
+//     }
+//     else
+//     {
+//         return (fib(n - 1) + fib(n - 2));
+//     }
+// }
 
-int main()
-{
-    int n;
-    cout << "Enter n : ";
-    cin >> n;
-    //fib(n);
-    for (int i =0; i<n; i++)
-    {
-        cout << fib(i) << "\t";
-    }
-    return 0;
-}
+// int main()
+// {
+//     int n;
+//     cout << "Enter n : ";
+//     cin >> n;
+//     //fib(n);
+//     for (int i =0; i<n; i++)
+//     {
+//         cout << fib(i) << "\t";
+//     }
+//     return 0;
+// }

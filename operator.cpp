@@ -1,15 +1,10 @@
 //29.02.2024
 
-#include<iostream>
-using namespace std;
-
-int main() 
-{
     //operators
     //1. Arithmetic operator 
     // +,-,/, %, * // use for calculations
 
-    // assignment operator
+    //2. assignment operator
     // = //for assigning values to variables 
 
     // a = a + b;
@@ -18,7 +13,11 @@ int main()
     // a = a*b;
     // a *= b;
 
+#include<iostream>
+using namespace std;
 
+int main() 
+{
     // int a = 10;
 
     // int b = 20;
@@ -54,7 +53,7 @@ int main()
     // Relational Operators or comparator o/p boolean
     // 1. < or >
     // 2. <= or >=
-    // 3. ==   // 5 == 5.0 true
+    // 3. ==   // 7 == 7.0 true
     // 4. != 
     
     // = vs == vs ===

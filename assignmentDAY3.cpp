@@ -141,7 +141,7 @@ public:
 
     ~Movie() 
     {
-        cout << "Movie Constructor Destructed." << name << endl;
+        cout << "Movie Constructor Destructed : " << name << endl;
     }
 
     void display() 
@@ -162,6 +162,7 @@ public:
 
 int main() {    
     string cast[SIZE] = {"Aamir Khan as Rancho", "R. Madhavan as Farhan Qureshi", "Sharman Joshi as Raju Rastogi"};
+    
     Movie m1 = Movie("3 Idiots", "Comedy/ Drama", 170, 8.4, cast, "Rajkumar Hirani", "Hit");
     m1.display();
 

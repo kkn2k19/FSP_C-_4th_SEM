@@ -21,7 +21,7 @@ int main()
 //Tokens
 //Small unit of a program that have special purpose
 //1. Keyword : they are predefined keyword that have special purpose
-//2. Indentifier : it refers to name of function, variable, constant, class and object etc
+//2. Identifier : it refers to name of function, variable, constant, class and object etc
 //3. Constants : they are also a type of variable that cannot be change
 //4. Strings : everycharacter in double quotes "" or in single quotes ' ' and they are sequential collection of characters
 //5. Operators : arthimetic, assignment, comparator or relational, bitwise etc

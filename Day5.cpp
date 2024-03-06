@@ -434,36 +434,39 @@
 //    like : concatenation, comparison, conversion, replace
 
 
-#include<iostream>
-#include<string>
+// #include<iostream>
+// #include<string>
 
-using namespace std;
+// using namespace std;
 
-int main()
-{
-    //creation of string
-    string name = "chandanOP";
-    cout << name << endl;
+// int main()
+// {
+//     //creation of string
+//     string name = "chandanOP";
+//     cout << name << endl;
 
-    //Length of string
-    cout << "Length of string : " << name.length() << endl;
+//     //Length of string
+//     cout << "Length of string : " << name.length() << endl;
 
-    //access and modify character of string
-    name[0] = 'C';
-    name[1] = 'H';
+//     //access and modify character of string
+//     name[0] = 'C';
+//     name[1] = 'H';
 
-    cout << name << endl; 
+//     cout << name << endl; 
 
-    //for append
-    name.append(" Gamer");
-    cout << name << endl;
+//     //for append
+//     name.append(" Gamer");
+//     cout << name << endl;
 
-    //find character in string
-    cout << name.find("OP") << endl;
+//     //find character in string
+//     cout << name.find("OP") << endl;
 
-    //replace character in string
-    //name.replace("OP", "op");
-    //cout << name << endl;
+//     //replace character in string
+//     name.replace(7, 8, "op");
+//     cout << name << endl;
+    
+//     name.replace(1, 1, "h");
+//     cout << name << endl;
 
-    return 0; 
-}
+//     return 0; 
+// }
